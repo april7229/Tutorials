@@ -1,9 +1,13 @@
 from django.conf.urls import url
 from . import views
-from django.contrib.auth.views import (
-    login, logout, password_reset, password_reset_done, password_reset_confirm,
-    password_reset_complete
-)
+# from django.contrib.auth.views import (
+#     login, logout, password_reset, password_reset_done, password_reset_confirm,
+#     password_reset_complete
+# )
+
+from accounts.views import reset_password_request_token, reset_password_confirm
+
+app_name="accounts"
 
 urlpatterns = [
     url(r'^login/$', login,
