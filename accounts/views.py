@@ -14,10 +14,10 @@ from django.contrib.auth.decorators import login_required
 
 def register(request):
     if request.method == 'POST':
-        form = RegistrationForm(request.POST) 
+        form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(reverse('accounts/home'))
+            return redirect(reverse('accounts:home'))
     else:
         form = RegistrationForm()
 

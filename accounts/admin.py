@@ -3,7 +3,7 @@ from accounts.models import UserProfile
 
 
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'user_info', 'city', 'phone'  )
+    list_display = ('user', 'user_info', 'city', 'phone', 'website')
     
     def user_info(self, obj):
         return obj.description
